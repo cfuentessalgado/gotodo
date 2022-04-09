@@ -21,7 +21,7 @@ func main() {
 		tl.listPending()
 	}
 	if os.Args[1] == "done" {
-        id, _ := strconv.Atoi(os.Args[2])
+		id, _ := strconv.Atoi(os.Args[2])
 		tl.completeTodo(id)
 	}
 	home := os.Getenv("HOME")
