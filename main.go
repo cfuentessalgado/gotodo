@@ -9,6 +9,11 @@ import (
 )
 
 func main() {
+	if len(os.Args) == 1 {
+		fmt.Println("Usage:")
+		fmt.Println("todo [add list done]")
+        os.Exit(1)
+	}
 	tl, err := loadTodoListFromDefaultFile()
 	if err != nil {
 		tl = TodoList{}
