@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	tl, err := loadTodoList()
+	tl, err := loadTodoListFromDefaultFile()
 	if err != nil {
 		tl = TodoList{}
 	}
@@ -33,7 +33,7 @@ func main() {
 	f.Write(json_tl)
 }
 
-func loadTodoList() (TodoList, error) {
+func loadTodoListFromDefaultFile() (TodoList, error) {
 	home := os.Getenv("HOME")
 	contents, err := os.ReadFile(home + "/.gotodo.txt")
 	if err != nil {
