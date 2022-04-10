@@ -1,4 +1,4 @@
 build:
-	go build -o dist/main main.go
+	go build -o ${GOPATH}/bin/gotodo main.go
 run:
 	go run main.go
